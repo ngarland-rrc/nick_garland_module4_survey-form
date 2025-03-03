@@ -11,8 +11,18 @@
 <body>
     <main>
         <form id="user-survey">
-            <fieldset>
+            <fieldset class="user_info">
                 <legend>User Information</legend>
+                <p class="peronal_title">
+                    <label for="personal_title_field">Title</label>
+                    <select name="title" id="personal_title_field">
+                        <option value="mr">Mr</option>
+                        <option value="mrs">Mrs</option>
+                        <option value="miss">Miss</option>
+                        <option value="Ms">Ms</option>
+                        <option value="dr">Dr</option>
+                    </select>
+                </p>
                 <p class="first-name">
                     <label for="first-name_field">First Name</label>
                     <input type="text" name="first-name" id="first-name_field">
@@ -21,11 +31,50 @@
                     <label for="last-name_field">Last Name</label>
                     <input type="text" name="last-name" id="first-name_field">
                 </p>
-                <p>
-                    <input type="submit" value="Submit">
+                <p class="birthdate">
+                    <label for="birthdate_field">Birthdate</label>
+                    <input type="date" name="birthdate" id="birthdate_field">
                 </p>
+                <div class="gender_input">
+                    <label for="gender">Gender</label>
+                    <div class="radio_group">
+                        <label for="male">
+                            <input type="radio" id="male" name="gender" value="Male"> Male
+                        </label>
+                        <label for="female">
+                            <input type="radio" id="female" name="gender" value="Female"> Female
+                        </label>
+                        <label for="other">
+                            <input type="radio" id="other" name="gender" value="Other"> Other
+                        </label>
+                    </div>
+                </div>
             </fieldset>
-
+            <fieldset class="account_info">
+                <legend>Account Information</legend>
+                <p class="user-name">
+                    <label for="user-name_field">Username</label>
+                    <input type="text" name="user-name" id="user-name_field">
+                </p>
+                <p>
+                    <label for="pwd">Password</label>
+                    <input type="password" id="pwd" name="pwd">
+                </p>
+                <p>
+                    <label for="email">Enter your email:</label>
+                    <input type="email" id="email" name="email">
+                </p>
+                <div>
+                    <label for="checkbox_field">What has been your favorite front end language so far?</label><br>
+                    <input type="checkbox" id="html" name="favorite_language" value="HTML">
+                    <label for="html"> My favorite is HTML</label>
+                    <input type="checkbox" id="css" name="favorite_language" value="CSS">
+                    <label for="css"> My favorite is CSS</label>
+                    <input type="checkbox" id="javascript" name="favorite_language" value="Javascript">
+                    <label for="javascript"> My favorite is Javascript</label>
+                </div>
+            </fieldset>
+            <input type="submit" value="Submit">
         </form>
     </main>
     <script src="./script.js"></script>
